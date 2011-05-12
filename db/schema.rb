@@ -14,8 +14,10 @@ ActiveRecord::Schema.define(:version => 20110414091525) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
-    t.string   "latlong"
-    t.string   "desc"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.string   "description"
+    t.integer  "remaining"
     t.integer  "hits"
     t.datetime "created_at"
     t.datetime "updated_at"

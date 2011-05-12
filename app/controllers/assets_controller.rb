@@ -6,7 +6,9 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @assets }
+      format.xml  { @assets }
+      format.json { render :json => @assets }
+      
     end
   end
 
@@ -17,7 +19,8 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @asset }
+      format.xml  { @asset }
+      format.json { render :json => @asset}
     end
   end
 

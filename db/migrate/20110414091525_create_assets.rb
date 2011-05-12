@@ -2,10 +2,11 @@ class CreateAssets < ActiveRecord::Migration
   def self.up
     create_table :assets do |t|
       t.string :name
-      t.string :latlong
-      t.string :desc
+      t.string :latitude
+      t.string :longitude
+      t.string :description
+      t.integer :remaining
       t.integer :hits
-
       t.timestamps
     end
   end
