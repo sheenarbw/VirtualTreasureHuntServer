@@ -38,5 +38,18 @@ module VirtualTreasureHuntServer
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    def render(opts = {}, &block)
+    	if opts[:to_yaml] then
+    		headers["Content-Type"] = "text/plain;"
+    		render :text => Hash.from_xml(render_to_string(:template => opts[:to_yaml], :layout => false)).to_yaml, :layout => false
+    	elsif opts[:to_json] then
+    		# headers["Content-Type"] = "text/javascript;"
+    		render :json => Hash.from_xml(render_to_string(:template => opts[:to_json], :layout => false)).to_json, :layout => false
+    	else
+    		super opts, &block
+    	end
+    end
+    
   end
 end

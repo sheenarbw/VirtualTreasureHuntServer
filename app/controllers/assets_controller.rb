@@ -19,8 +19,8 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { @asset }
-      format.json { render :json => @asset}
+      format.xml  { render :layout => false }
+      format.json { render :json => @asset }
     end
   end
 
