@@ -1,17 +1,16 @@
 <div id="header">
   
-  <div id="site-nav">
-    <%= link_to "Home" %> |
-    <%= link_to "Edit Assets", assets_path %>
-    
-  </div>
-  
   <div id="user-nav">
     Signed in as <strong>admin</strong> |
     <%= link_to "Administer Users", users_path %> |
     <%= link_to "Edit Profile" %> |
     <%= link_to "Logout" %>
   </div>
- 
+  
+  <div id="site-nav">
+    <%= link_to "Home" %> |
+    <%= link_to "Administer Assets", assets_path %> |
+    <%= link_to "Stats" %>
+  </div>
   
 </div>
