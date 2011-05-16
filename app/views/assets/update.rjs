@@ -1,4 +1,1 @@
-page.hide :edit_form
-page.show :asset_list
-# page.replace_html :notice, flash[:notice]
-# flash.discard
+page.replace_html :sidebar, :partial => 'list'

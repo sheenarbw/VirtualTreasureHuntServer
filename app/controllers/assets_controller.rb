@@ -7,6 +7,7 @@ class AssetsController < ApplicationController
     @assets = Asset.all #(:select => [:id,:latitude,:longitude, :name, :description])
 
     respond_to do |format|
+      format.js
       format.html # index.html.erb
       format.xml  { @assets }
       format.json { render :json => @assets }
@@ -20,7 +21,7 @@ class AssetsController < ApplicationController
     @asset = Asset.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.js # show.html.erb
       format.xml  { render :layout => false }
       format.json { render :json => @asset }
     end
@@ -32,6 +33,7 @@ class AssetsController < ApplicationController
     @asset = Asset.new
 
     respond_to do |format|
+      format.js
       format.html # new.html.erb
       format.xml  { render :xml => @asset }
     end

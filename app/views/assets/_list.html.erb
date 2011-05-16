@@ -1,29 +1,26 @@
-<h1>Listing assets</h1>
+<h2>Available Assets</h2>
 
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th>Description</th>
-    <th>Remaining</th>
-    <th>Hits</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @assets.each do |asset| %>
+      <tr>
+        <td><%= link_to asset.name, asset, :remote => true %></td>
 
-<% @assets.each do |asset| %>
-  <tr>
-    <td><%= asset.latitude %></td>
-    <td><%= asset.longitude %></td>
-
-    <td><%= link_to 'Show', asset %></td>
-    <td><%= link_to 'Edit', edit_asset_path(asset), :remote => true %></td>
-    <td><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+        <td><%= link_to 'Edit', edit_asset_path(asset), :remote => true %></td>
+        <td><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <br />
+<%= link_to 'New Asset', new_asset_path, :remote => true %>

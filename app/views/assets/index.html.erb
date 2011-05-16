@@ -1,4 +1,4 @@
-<!-- Import the markers from the databse into the app -->
+<h1>Administer Assets</h1>
 <script>
   markers = <%= raw ActiveSupport::JSON.encode(@assets) %>
 </script>
@@ -6,13 +6,7 @@
 <div id="map_canvas"></div>
 
 <div id="sidebar">
-  <div id="asset_list">
-    <%= render 'list' %>  
-  </div>
-
-  <%= link_to 'New Asset', new_asset_path %>
-
-  <div id="edit_form"></div> 
+  <%= render 'list' %>  
 </div>
 
 
