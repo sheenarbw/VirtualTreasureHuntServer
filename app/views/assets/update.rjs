@@ -1,0 +1,3 @@
+page.hide :edit_form
+# page.replace_html :notice, flash[:notice]
+# flash.discard

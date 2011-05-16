@@ -1,0 +1,2 @@
+page.replace_html :edit_form, :partial => 'form'
+page.show :edit_form

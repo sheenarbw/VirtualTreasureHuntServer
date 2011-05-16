@@ -2,7 +2,9 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.xml
   def index
-    @assets = Asset.all
+    @onload = "initialize()"
+    
+    @assets = Asset.all #(:select => [:id,:latitude,:longitude, :name, :description])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -63,7 +65,7 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       if @asset.update_attributes(params[:asset])
-        format.html { redirect_to(@asset, :notice => 'Asset was successfully updated.') }
+        format.js
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
