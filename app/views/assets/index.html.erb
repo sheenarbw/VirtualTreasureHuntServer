@@ -3,11 +3,16 @@
   markers = <%= raw ActiveSupport::JSON.encode(@assets) %>
 </script>
 
-<div id="asset_list">
-  <%= render 'list' %>  
+<div id="map_canvas"></div>
+
+<div id="sidebar">
+  <div id="asset_list">
+    <%= render 'list' %>  
+  </div>
+
+  <%= link_to 'New Asset', new_asset_path %>
+
+  <div id="edit_form"></div> 
 </div>
 
-<%= link_to 'New Asset', new_asset_path %>
-
-<div id="edit_form"></div>
 
