@@ -2,10 +2,12 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.xml
   def index
+    @sidebar_title = "Available Assets"
+    
     @onload = "initialize()"
     
     @assets = Asset.all #(:select => [:id,:latitude,:longitude, :name, :description])
-
+    
     respond_to do |format|
       format.js
       format.html # index.html.erb
@@ -18,6 +20,8 @@ class AssetsController < ApplicationController
   # GET /assets/1
   # GET /assets/1.xml
   def show
+    @sidebar_title = "Asset Details"
+    
     @asset = Asset.find(params[:id])
 
     respond_to do |format|
@@ -30,8 +34,9 @@ class AssetsController < ApplicationController
   # GET /assets/new
   # GET /assets/new.xml
   def new
+    @sidebar_title = "New Asset"
+    
     @asset = Asset.new
-
     respond_to do |format|
       format.js
       format.html # new.html.erb
@@ -41,6 +46,8 @@ class AssetsController < ApplicationController
 
   # GET /assets/1/edit
   def edit
+    @sidebar_title = "Edit Asset"
+    
     @asset = Asset.find(params[:id])
   end
 
