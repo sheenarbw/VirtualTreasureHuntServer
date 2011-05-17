@@ -1,5 +1,7 @@
 /* @override http://localhost:3000/stylesheets/custom.css */
 
+/* @override http://localhost:3000/stylesheets/custom.css */
+
 html {
 	height: 100%;
 
@@ -81,6 +83,10 @@ a {
 	float: left;
 	border: 3px solid #6e6e6e;
 	margin-left: 10px;
+}
+
+.admin {
+	color: #f00;
 }
 
 

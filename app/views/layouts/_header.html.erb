@@ -2,15 +2,16 @@
   
   <div id="user-nav">
     Signed in as <strong>admin</strong> |
-    <%= link_to "Administer Users", users_path %> |
+    <%= link_to "Administer Users", users_path, :class => :admin %> |
     <%= link_to "Edit Profile" %> |
     <%= link_to "Logout" %>
   </div>
   
   <div id="site-nav">
     <%= link_to "Home" %> |
-    <%= link_to "Administer Assets", assets_path %> |
-    <%= link_to "Stats" %>
+    <%= link_to "Administer Assets", assets_path, :class => :admin %> |
+    <%= link_to "Stats", "#", :class => :admin %> |
+    <%= link_to "My Collected Assets", "#" %>
   </div>
   
 </div>
