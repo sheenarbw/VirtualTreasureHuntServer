@@ -1,52 +1,86 @@
 /* @override http://localhost:3000/stylesheets/custom.css */
+
 html {
 	height: 100%;
 
 }
 body {
 	height: 100%;
-	padding:0;
-	margin:0;
-	background: url(/images/pattern4.png) repeat scroll 35px;
+	width:100% ;
+	background: url(/images/pattern5.png) repeat scroll 35px;
 }
+
+a {
+	text-decoration: none;
+}
+
 #header {
 	padding:5px;
 	background:rgba(245,245,245,0.75);
-}
-
-#user-nav {
-	float: right;
-}
-
-#footer {
-	width:100%;
-  
+	display: block;
+	float: none;
+	position: relative;
 }
 
 #content {
 	width: 100%;
-	height: 100%;
-	padding: 10px;
+	height: 80%;
+	display: block;
+	position: relative;
 }
 
+#footer {
+	height: 15px;
+	width:100%;
+	text-align: center;
+	margin-top: 80px;
+	font-weight: bold;
+}
+
+
+
+#content h1 {
+	padding: 10px;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	font-variant: small-caps;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#sidebar h2 {
+	padding: 5px;
+	font-variant: small-caps;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	text-align: left;
+}
+
+#header #user-nav {
+	float: right;
+}
+
+
 #sidebar {
-	width: 25%;
-	background: rgba(254,255,254,0.48);
+	width: 23%;
+	background: rgba(254,255,254,0.6);
 	height: 100%;
 	display: inline;
 	float: right;
-	padding: 10px;
+	margin-right: 10px;
+	margin-left: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 2px dashed #6e6e6e;
 }
 
-
+/*This sets the odd row colours of the table*/
 #sidebar tbody tr:nth-child(odd) td, tbody tr.odd td {background: #d4dae8;}
 
 #map_canvas {
 	height: 100%;
-	visibility: visible;
 	width: 73%;
 	float: left;
 	border: 3px solid #6e6e6e;
+	margin-left: 10px;
 }
 
 
